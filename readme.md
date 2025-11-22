@@ -1,6 +1,6 @@
-# WebD — Weekly Labs (Operating Systems course)
+# WebD — Weekly Labs (Web Development course)
 
-This repository contains weekly PHP/HTML labs for the OS course (Weeks 2–9). Each week lives in its own folder and contains exercises demonstrating basic PHP, file I/O, arrays, forms, and simple CRUD with MySQL (Week 8).
+This repository contains weekly PHP/HTML labs for the Web Dev course (Weeks 2–9). Each week lives in its own folder and contains exercises demonstrating basic PHP, file I/O, arrays, forms, and simple CRUD with MySQL (Week 8).
 
 ## Quick start
 
