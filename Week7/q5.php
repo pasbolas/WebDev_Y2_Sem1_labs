@@ -7,7 +7,7 @@ $dbname = "labdb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+// we are checking the connection here
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -32,6 +32,23 @@ if (isset($_POST['UserName']) && isset($_POST['Password']) && isset($_POST['Firs
     }
 }
 
+if (isset($_GET['UserName'])) {
+
+    $editing = true;
+    $UserName = $_GET['UserName'];
+
+    $sql = "SELECT * FROM user WHERE UserName='$UserName'";
+    $result = $conn->query($sql);
+
+    if ($result && $result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+
+        $Password  = $row['Password'];
+        $FirstName = $row['FirstName'];
+        $LastName  = $row['LastName'];
+    }
+}
+
 $conn->close();
 ?>
 
@@ -52,4 +69,6 @@ $conn->close();
         
         <p><input type="submit" value="Add New"/></p>
     </form>
+
+    <a href="../Week8/index.php">Menu</a>
 </html>
